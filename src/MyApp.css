@@ -1,0 +1,130 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: arial, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  color: black;
+  font-size: 80%;
+  padding: 1em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  height: 90%;
+  display: flex;
+}
+
+article {
+  background-color: white;
+  /*flex: 2 2 40%;*/
+  flex: 1 40%;
+  /*order: -1;*/
+}
+
+nav,
+aside {
+  flex: 1;
+}
+
+/*@media screen and (max-width: 500px) {
+    
+    main {
+        flex-direction: column;
+    }
+    
+}*/
+
+h1 {
+  font-size: 1.2em;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer,
+nav,
+article,
+aside {
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+}
+
+header,
+footer {
+  height: 4.5em;
+}
+
+.Reg-login {
+  /*display: flex;  
+  flex: 1;*/
+  flex-direction: row;  
+  justify-content: right;
+  border-width: 1;
+  border-color: black;  
+  border-style: solid;  
+}
+
+.Form-sub {
+  /*display: flex;*/
+  flex: 1;
+  flex-direction: column;
+  justify-content: left;
+  align-content: left;
+  text-align: left;
+}
+
+header {
+  background-color: white;
+  border-width: 1;
+  border-color: black;  
+  border-style: solid;  
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+
+nav {
+  background-color: white;
+  border-style: solid;  
+  border-width: 1;
+  border-color: black;  
+  /*display: flex;*/
+  /*flex: 1;*/
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  /*justify-content: space-between;*/
+}
+
+aside {
+  background-color: white;
+  border-style: solid;
+  border-width: 1;
+  border-color: black;
+  display: flex;
+  /*flex: 1;*/
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: white;
+  border-style: solid;
+  border-width: 1;
+  border-color: black;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}

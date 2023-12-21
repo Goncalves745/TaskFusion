@@ -44,73 +44,22 @@ function App2() {
       <main className="page-content">
         <Nav>
           <h1>Navigation</h1>
-
             <p>
                 {/*<Link to={`echo/${id}`}>List</Link>*/}
                 <Link to={`list?${query.toString()}`} query={query}>List</Link>
             </p>
-
         </Nav>
         <article className="content-article">
-          <h1>Main Content</h1>
+          <h1>TASK</h1>
           <br />
-          <form method="post" className='Form-sub' onSubmit={handleSubmit}>
-            <label>
-              Text input: <input name="myInput" defaultValue="Some initial value" />
-            </label>
-            <hr />
-            <label>
-              Checkbox: <input type="checkbox" name="myCheckbox" defaultChecked={true} />
-            </label>
-            <hr />
-            <p>
-              Radio buttons:
-              <label><input type="radio" name="myRadio" value="option1" /> Option 1</label>
-              <label><input type="radio" name="myRadio" value="option2" defaultChecked={true} /> Option 2</label>
-              <label><input type="radio" name="myRadio" value="option3" /> Option 3</label>
-            </p>
-            <hr />
-            <button type="reset">Reset form</button>
-            <button type="submit">Submit form</button>
-          </form>
-
-          <List />
-
-          <div style={{justifyContent: "left", textAlign: "left",}}>
-            <Data />         
-          </div>
-
-          <div style={{justifyContent: "left", textAlign: "left",}}>
-            <MyFeature
-                addArticle={({
-                    title,
-                    summary,
-                    onChangeTitle,
-                    onChangeSummary,
-                    onClickAdd,
-                }) => (
-                    <AddArticle
-                    name="Articles"
-                    title={title}
-                    summary={summary}
-                    onChangeTitle={onChangeTitle}
-                    onChangeSummary={onChangeSummary}
-                    onClickAdd={onClickAdd}
-                    />
-                )}
-                articleList={({ articles, onClickToggle, onClickRemove }) => (
-                    <ArticleList
-                    articles={articles}
-                    onClickToggle={onClickToggle}
-                    onClickRemove={onClickRemove}
-                    />
-                )}
-            />
+          <textarea id="areaTask" rows="20" cols="100"></textarea>
+          <div style={{justifyContent: "left", textAlign: "left",}}>       
           </div>
         </article>
-
         <aside className="content-sidebar">
           <h1>Sidebar</h1>
+          <br />
+          <List />
         </aside>
       </main>
 

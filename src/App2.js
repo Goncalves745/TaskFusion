@@ -3,6 +3,7 @@ import Header from './Header';
 import Nav from './Nav';
 import List from './List';
 import Data from './Data';
+import Task from './Task'
 
 
 import * as React from "react";
@@ -34,8 +35,8 @@ function App2() {
     alert(e.target.myInput.value);
   }
 
-  const id = "1";
   const query = new URLSearchParams({ id: 1 });
+  const [Task, setTask] = React.useState("Task")
 
   return (
 
@@ -52,9 +53,15 @@ function App2() {
         <article className="content-article">
           <h1>TASK</h1>
           <br />
-          <textarea id="areaTask" rows="20" cols="100"></textarea>
-          <div style={{justifyContent: "left", textAlign: "left",}}>       
-          </div>
+            <textarea id="areaTask" rows="20" cols="100" style={{justifyContent: "left", textAlign: "left",}}>
+              value={Task}
+              onChange={(e) => setTask(e.target.value)}
+            </textarea>
+            <br />
+            <div style={{textAlign:'right'}}>
+              <button type='Cancel' style={{marginRight: '8px'}}>Cancel</button>
+              <button type='Done'>Done</button>
+            </div>
         </article>
         <aside className="content-sidebar">
           <h1>Sidebar</h1>

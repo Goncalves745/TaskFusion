@@ -1,9 +1,10 @@
 import './MyApp.css';
 import Header from './Header';
 import Nav from './Nav';
+import Barra from './Barra';
 import List from './List';
 import Data from './Data';
-import Task from './Task'
+
 
 
 import * as React from "react";
@@ -41,8 +42,15 @@ function App2() {
   return (
 
     <div style={{height: "90%",}}>
+      
       <Header />
       <main className="page-content">
+      <Barra />
+          <Routes>
+
+            <Route path='/' />
+            
+          </Routes>
         <Nav>
           <h1>Navigation</h1>
             <p>
@@ -53,9 +61,9 @@ function App2() {
         <article className="content-article">
           <h1>TASK</h1>
           <br />
-            <textarea id="areaTask" rows="20" cols="100" style={{justifyContent: "left", textAlign: "left",}}>
-              value={Task}
-              onChange={(e) => setTask(e.target.value)}
+            <textarea id="areaTask" rows="20" cols="100" style={{justifyContent: "left", textAlign: "left",marginTop: '8px'}}>
+              {/*value={Task}*/}
+              {/*onChange={(e) => setTask(e.target.value)}*/}
             </textarea>
             <br />
             <div style={{textAlign:'right'}}>

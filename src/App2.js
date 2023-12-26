@@ -40,17 +40,19 @@ function App2() {
   const [Task, setTask] = React.useState("Task")
 
   return (
+    
 
     <div style={{height: "90%",}}>
-      
-      <Header />
-      <main className="page-content">
-      <Barra />
+       <Barra />
           <Routes>
 
             <Route path='/' />
             
           </Routes>
+      
+      {/*<Header /> <--- barra superior anteriro */} 
+      <main className="page-content">
+     
         <Nav>
           <h1>Navigation</h1>
             <p>

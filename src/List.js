@@ -20,7 +20,7 @@ function List() {
 
   return (
     <>
-        <h1>{params.id || searchParams.get("id")}</h1>;
+        <h1>{params.id || searchParams.get("id")}</h1>
 
         <ul style={{justifyContent: "left", textAlign: "left",}}>
             {produtos.map((p) => (

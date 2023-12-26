@@ -18,6 +18,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 function App2() {
 
   function handleSubmit(e) {
+    
     // Prevent the browser from reloading the page
     e.preventDefault();
 
@@ -41,7 +42,7 @@ function App2() {
 
   return (
     
-
+<>
     <div style={{height: "90%",}}>
        <Barra />
           <Routes>
@@ -79,13 +80,17 @@ function App2() {
           <List />
         </aside>
       </main>
-
+      
       <footer className="page-footer">
-        <h1>Footer E</h1>
-        <h1>Footer D</h1>        
-      </footer>
+      <h1>Footer E</h1>
+      <h1>Footer D</h1>        
+    </footer>
     </div>
+    
+    
+  </>
   );
+  
 }
 
 export default App2;

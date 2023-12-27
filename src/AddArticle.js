@@ -1,29 +1,37 @@
 import * as React from "react";
 
-function AddArticle({
+
+function AddTask({
   name,
   title,
-  summary,
+  task,
   onChangeTitle,
-  onChangeSummary,
+  onChangeTask,
   onClickAdd,
-}) {
+}) 
+{
   return (
     <section>
-      <h1>{name}</h1>
       <input
         placeholder="Title"
         value={title}
         onChange={onChangeTitle}
       />
-      <input
-        placeholder="Summary"
-        value={summary}
-        onChange={onChangeSummary}
-      />
-      <button onClick={onClickAdd}>Add</button>
+      <textarea 
+            id="areaTask" 
+            rows="20" 
+            cols="100" 
+            style={{justifyContent: "left", textAlign: "left",marginTop: '8px'}}
+            placeholder='task'
+            value={task}
+            onChange={onChangeTask}
+            >
+            </textarea>
+      <h1>{name}</h1>
+      <button onClick={onClickAdd}>Done</button>
     </section>
   );
 }
 
-export default AddArticle;
+
+export default AddTask;

@@ -64,15 +64,8 @@ function App2() {
         <article className="content-article">
           <h1>TASK</h1>
           <br />
-            <textarea id="areaTask" rows="20" cols="100" style={{justifyContent: "left", textAlign: "left",marginTop: '8px'}}>
-              {/*value={Task}*/}
-              {/*onChange={(e) => setTask(e.target.value)}*/}
-            </textarea>
+            <AddArticle />
             <br />
-            <div style={{textAlign:'right'}}>
-              <button type='Cancel' style={{marginRight: '8px'}}>Cancel</button>
-              <button type='Done'>Done</button>
-            </div>
         </article>
         <aside className="content-sidebar">
           <h1>Sidebar</h1>

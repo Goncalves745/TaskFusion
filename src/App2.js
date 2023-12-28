@@ -4,6 +4,7 @@ import Nav from './Nav';
 import Barra from './Barra';
 import List from './List';
 import Data from './Data';
+import Estado from './Estado';
 
 
 
@@ -16,6 +17,7 @@ import MyFeature from "./MyFeature";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App2() {
+  
 
   function handleSubmit(e) {
     
@@ -62,18 +64,12 @@ function App2() {
         </Nav>
 
         <article className="content-article">
-          <h1>TASK</h1>
+          
           <br />
-            <AddArticle />
+            <Estado />
             <br />
-        </article>
-
-        
-        <aside className="content-sidebar">
-        <h1>Tasks</h1>
-          <br />
-          <List />
-        </aside>
+        </article>      
+       
       </main>
       
         <footer className="page-footer">

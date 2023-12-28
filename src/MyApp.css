@@ -6,6 +6,8 @@ body {
   font-family: arial, sans-serif;
 }
 
+
+
 body {
   box-sizing: border-box;
   color: black;
@@ -46,18 +48,30 @@ aside {
   flex-wrap: nowrap;
 }
 
+.paradireita{
+  position:absolute;
+  list-style: none;
+  right: 100px;
+} 
+
+
+.paraesquerda{ 
+  margin-right: 500px;
+}
+
 aside h1 {
   align-self: flex-start;
 }
 
 
-/*@media screen and (max-width: 500px) {
-    
-    main {
-        flex-direction: column;
-    }
-    
-}*/
+@media only screen and (max-width: 1000px) {
+  .paradireita{
+    color: red ;
+    position:relative;
+    list-style: none;
+    margin-right: 45%;
+  }  
+}
 
 h1 {
   font-size: 1.2em;

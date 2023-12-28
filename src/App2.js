@@ -53,7 +53,6 @@ function App2() {
       
       {/*<Header /> <--- barra superior anteriro */} 
       <main className="page-content">
-     
         <Nav>
           <h1>Navigation</h1>
             <p>
@@ -61,23 +60,26 @@ function App2() {
                 <Link to={`list?${query.toString()}`} query={query}>List</Link>
             </p>
         </Nav>
+
         <article className="content-article">
           <h1>TASK</h1>
           <br />
             <AddArticle />
             <br />
         </article>
+
+        
         <aside className="content-sidebar">
-          <h1>Sidebar</h1>
+        <h1>Tasks</h1>
           <br />
           <List />
         </aside>
       </main>
       
-      <footer className="page-footer">
-      <h1>Footer E</h1>
-      <h1>Footer D</h1>        
-    </footer>
+        <footer className="page-footer">
+          <h1>Footer E</h1>
+          <h1>Footer D</h1>        
+        </footer>
     </div>
     
     

@@ -51,12 +51,18 @@ aside {
 .paradireita{
   position:absolute;
   list-style: none;
-  right: 100px;
+  right: 30px;
 } 
 
 
 .paraesquerda{ 
-  margin-right: 500px;
+  margin-right: 50px;
+}
+
+.pesquisa{ 
+  text-align: left;
+  position:absolute;
+  left: 30px;
 }
 
 aside h1 {
@@ -65,12 +71,19 @@ aside h1 {
 
 
 @media only screen and (max-width: 1000px) {
-  .paradireita{
-    
+  .paradireita{    
     position:relative;
     list-style: none;
-    margin-right: 45%;
+    padding-bottom: 30px;    
   }  
+
+  .pesquisa{ 
+    padding-bottom: 30px; 
+    position:relative;
+    text-align: center;
+    left: 0px;
+    align-items: center;
+  }
 }
 
 h1 {

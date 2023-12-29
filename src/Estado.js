@@ -123,6 +123,18 @@ export default function Estado() {
                 </li>
             ))}
             </ul>
+
+            <div className='pesquisa'>
+            <h3>Pesquisar Registo</h3>       
+            <label>
+                Pesquisar registo:
+                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="pesquisar artigo" name="pesq" />
+            </label>
+            <br />
+            <br />
+            <button type="button" onClick={pesquisa}>Pesquisar</button>
+            </div>
+
             <div className='paraesquerda'>
             
             <h3>Adicionar Registo</h3>
@@ -142,20 +154,12 @@ export default function Estado() {
                 <button type="reset">Reset</button>
                 <button type="submit">Add</button>
             </form>
-            <br />
-                <br /> 
-            <h3>Pesquisar Registo</h3>
-
-         
-            <label>
-                Pesquisar registo:
-                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="pesquisar artigo" name="pesq" />
-            </label>
-            <br />
-            <br />
-            <button type="button" onClick={pesquisa}>Pesquisar</button>
-
             </div>
+            <br /><br /> 
+            
+           
+
+            
             
         </>
     );

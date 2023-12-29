@@ -19,25 +19,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 function App2() {
   
 
-  function handleSubmit(e) {
-    
-    // Prevent the browser from reloading the page
-    e.preventDefault();
-
-    // Read the form data
-    const form = e.target;
-    const formData = new FormData(form);
-
-    // You can pass formData as a fetch body directly:
-    /*fetch('/some-api', { method: form.method, body: formData });*/
-
-    // Or you can work with it as a plain object:
-    const formJson = Object.fromEntries(formData.entries());
-    //console.log(formJson);
-    console.log(formJson);
-    //alert(formData.entries());
-    alert(e.target.myInput.value);
-  }
+  
 
   const query = new URLSearchParams({ id: 1 });
   const [Task, setTask] = React.useState("Task")
@@ -53,19 +35,12 @@ function App2() {
             
           </Routes>
       
-      {/*<Header /> <--- barra superior anteriro */} 
+      
       <main className="page-content">
-        <Nav>
-          <h1>Navigation</h1>
-            <p>
-                {/*<Link to={`echo/${id}`}>List</Link>*/}
-                <Link to={`list?${query.toString()}`} query={query}>List</Link>
-            </p>
-        </Nav>
+        
 
         <article className="content-article">
-          
-          <br />
+            <br />
             <Estado />
             <br />
         </article>      

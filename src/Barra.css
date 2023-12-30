@@ -24,9 +24,12 @@
     transition: 850ms;
   }
   
-  .nav-menu.active {    
+  .nav-menu.active {   
+    position:fixed;
     left: 0;
     transition: 350ms;
+    z-index: 999;
+   
   }
   
   .nav-text {

@@ -3,16 +3,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-/*
-const id = (function* () {
-    let i = 1;
-    while (true) {
-      yield i;
-      i += 1;
-    }
-})();
-*/
-
 export default function Estado() {
     const [articles, setArticles] = useState([
         {
@@ -53,13 +43,6 @@ export default function Estado() {
         const formData = new FormData(form);
 
         const k = data[data.length - 1].id + 1;
-
-        /*
-        alert(formData.get('regTitle'));
-        alert(k);
-        regSum
-        */
-
         const nArr = [...articles, {
                 id: k,
                 title: formData.get('regTitle'),
@@ -71,24 +54,8 @@ export default function Estado() {
         console.log(nArr);
         setArticles(nArr);
 
-        /*
-        fetch('/api/form-submit-url', {
-            method: 'POST',
-            body: formData,
-        });
-        */
-
-        //alert(formData.regTitle);
-
-        /*
-        fetch('/some-api', { method: form.method, body: formData });
-
-        const formJson = Object.fromEntries(formData.entries());
-        console.log(formJson);        
-        */
+       
     }
-
-    //console.log();
 
     const [data, setData] = useState(articles);
     const [search, setSearch] = useState("");    
@@ -106,8 +73,9 @@ export default function Estado() {
 
     return (
         <>
-            <h1 className='paraesquerda'>TASK</h1>
-
+            <h1 style={{color: "white"}}>TASK</h1>
+            <br />
+            
             <ul className="paradireita">
             <h1>List</h1>
             <br/>
@@ -123,7 +91,7 @@ export default function Estado() {
                 </li>
             ))}
             </ul>
-
+            
             <div className='pesquisa'>
             <h3>Pesquisar Registo</h3>       
             <label>
@@ -156,10 +124,7 @@ export default function Estado() {
             </form>
             </div>
             <br /><br /> 
-            
-           
-
-            
+          
             
         </>
     );

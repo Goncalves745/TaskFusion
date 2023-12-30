@@ -12,7 +12,7 @@ body {
   box-sizing: border-box;
   color: black;
   font-size: 80%;
- 
+  background-color: #161c24;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,8 @@ main {
 }
 
 article {
-  background-color: white;
+  
+  background-color: #161c24;
   flex: 2 2 50%;
   /*flex:  50%;*/
   /*order: -1;*/
@@ -41,7 +42,6 @@ aside {
   border-width: 1;
   border-color: black;
   display: flex;
-  
   flex-direction: column;
   justify-content: flex-start;
   align-content: stretch;
@@ -49,19 +49,36 @@ aside {
 }
 
 .paradireita{
+  color: white;
+  padding-top: 1000px;
+  padding: 30px;
+  border-radius: 40px;
+  background-color: #4f6782;
+  border: solid 3px #37485b;
   position:absolute;
   list-style: none;
   right: 30px;
 } 
 
 
+
 .paraesquerda{ 
-  margin-right: 50px;
+  color: white;
+  background-color: #4f6782;
+  border: solid 3px #37485b;
+  padding: 10px;
+  border-radius: 40px;  
+  margin-right: 40%;
+  margin-left: 40%;
 }
 
 .pesquisa{ 
-  text-align: left;
-  position:absolute;
+  color: white;
+  position:fixed;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: #4f6782;
+  border: solid 3px #37485b;  
   left: 30px;
 }
 
@@ -71,15 +88,41 @@ aside h1 {
 
 
 @media only screen and (max-width: 1000px) {
-  .paradireita{    
-    position:relative;
+
+.paraesquerda{ 
+  color: white;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #4f6782;
+  border: solid 3px #37485b;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+  .paradireita{   
+    color: white; 
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 10px;
+    border-radius: 40px;    
+    background-color: #4f6782;
+    border: solid 3px #37485b;
+    padding-bottom: 30px; 
+    position:static;
     list-style: none;
     padding-bottom: 30px;    
   }  
 
-  .pesquisa{ 
+  .pesquisa{
+    color: white;
+    margin-right: 29%;
+    margin-left: 29%;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #4f6782;
+    border: solid 3px #37485b;
     padding-bottom: 30px; 
-    position:relative;
+    position:static;
     text-align: center;
     left: 0px;
     align-items: center;
@@ -146,18 +189,16 @@ nav {
   border-width: 1;
   border-color: black;  
   height:auto;
-  /*display: flex;*/
-  /*flex: 1;*/
   flex-direction: column;
   justify-content: left;
   text-align: left;
-  /*justify-content: space-between;*/
 }
 
 
 footer {
+  color: white;
   position: absolute;
-  width: 99%;
+  width: 100%;
   bottom: 0;
   display: flex;
   flex: 1;

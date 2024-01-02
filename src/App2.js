@@ -5,7 +5,7 @@ import Barra from './Barra';
 import List from './List';
 import Data from './Data';
 import Estado from './Estado';
-
+import DatePicker from './DatePicker';
 
 
 import * as React from "react";

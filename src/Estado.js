@@ -2,31 +2,32 @@ import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
+import DatePicker from './DatePicker';
 
 export default function Estado() {
     const [articles, setArticles] = useState([
         {
           id: 1,
-          title: "Article 1",
-          summary: "Article 1 Summary",
+          title: "Task 1",
+          summary: "Task 1 Summary",
           display: "none",
         },
         {
           id: 2,
-          title: "Article 2",
-          summary: "Article 2 Summary",
+          title: "Task 2",
+          summary: "Task 2 Summary",
           display: "none",
         },
         {
           id: 3,
-          title: "Article 3",
-          summary: "Article 3 Summary",
+          title: "Task 3",
+          summary: "Task 3 Summary",
           display: "none",
         },
         {
           id: 4,
-          title: "Article 4",
-          summary: "Article 4 Summary",
+          title: "Task 4",
+          summary: "Task 4 Summary",
           display: "none",
         },
     ]);
@@ -73,11 +74,13 @@ export default function Estado() {
 
     return (
         <>
+            
             <h1 style={{color: "white"}}>TASK</h1>
             <br />
             
             <ul className="paradireita">
             <h1>List</h1>
+            <DatePicker />
             <br/>
             {data.map((i) => (
                 <li key={i.id}>{i.title} : {i.summary} : 
@@ -93,10 +96,10 @@ export default function Estado() {
             </ul>
             
             <div className='pesquisa'>
-            <h3>Pesquisar Registo</h3>       
+            <h3>Pesquisar Task</h3>       
             <label>
-                Pesquisar registo:
-                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="pesquisar artigo" name="pesq" />
+               
+                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar Task" name="pesq" />
             </label>
             <br />
             <br />
@@ -109,13 +112,13 @@ export default function Estado() {
             <form method="post" style={{marginTop: "20px"}} onSubmit={handleSubmit}>
                 <label>
                     Titulo:
-                    <input type="text" placeholder="titulo" name="regTitle" />
+                    <input type="text" placeholder="Task" name="regTitle" />
                 </label>
                 <br />
                 <br />
                 <label>
-                    Sumário:
-                    <input type="text" placeholder="sumário" name="regSum" />
+                    Descrição:
+                    <input type="text" placeholder="Descrição" name="regSum" />
                 </label>                
                 <br />
                 <br />                
@@ -124,7 +127,7 @@ export default function Estado() {
             </form>
             </div>
             <br /><br /> 
-          
+
             
         </>
     );

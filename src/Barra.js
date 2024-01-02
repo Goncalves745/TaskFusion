@@ -18,7 +18,7 @@ function Barra() {
         
       </Link> 
       <div>
-        <p>TaskFusion</p>  
+        <p>TaskFusion </p>  
         </div>
     </div> 
     <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>

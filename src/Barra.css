@@ -1,76 +1,105 @@
 .barra {
-    background-color: #060b26;
-    height: 80px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
+  background-color: #060b26;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+}
+
+.nav-menu {
+  background-color: #060b26;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.nav-menu.active {   
+  position:fixed;
+  left: 0;
+  transition: 350ms;
+  z-index: 999;
+ 
+}
+
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #1a83ff;
+}
+
+.nav-menu-items {
   
-  .menu-bars {
-    margin-left: 2rem;
-    font-size: 2rem;
-    background: none;
-  }
-  
-  .nav-menu {
-    background-color: #060b26;
-    width: 250px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    transition: 850ms;
-  }
-  
-  .nav-menu.active {   
-    position:fixed;
-    left: 0;
-    transition: 350ms;
-    z-index: 999;
-   
-  }
-  
-  .nav-text {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 8px 0px 8px 16px;
-    list-style: none;
-    height: 60px;
-  }
-  
-  .nav-text a {
-    text-decoration: none;
-    color: #f5f5f5;
-    font-size: 18px;
-    width: 70%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    border-radius: 4px;
-  }
-  
-  .nav-text a:hover {
-    background-color: #1a83ff;
-  }
-  
-  .nav-menu-items {
-    
-    width: 100%;
-  }
-  
-  .navbar-toggle {
-    background-color: #060b26;
-    width:70%;
-    height: 80px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-  
-  span {
-    margin-left: 16px;
-  }
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #060b26;
+  width:70%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
+
+.barra p{
+color: white;
+text-align: center;
+margin: 0;
+top: 2.7%;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+font-size: 2rem;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+animation: fadeInUp 1s ease;
+transition: color 0.3s ease;
+}
+
+@keyframes fadeInUp {
+from {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+.barra p:hover {
+color: green; /* Change the color on hover */
+}

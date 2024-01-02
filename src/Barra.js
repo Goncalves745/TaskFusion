@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
@@ -13,7 +15,11 @@ function Barra() {
      <div className="barra">
       <Link to="#"className='menu-bars'>
         <FaIcons.FaBars onClick={showSidebar} />
-      </Link>     
+        
+      </Link> 
+      <div>
+        <p>TaskFusion </p>  
+        </div>
     </div> 
     <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={showSidebar}>

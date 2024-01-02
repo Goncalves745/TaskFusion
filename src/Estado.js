@@ -79,8 +79,7 @@ export default function Estado() {
             <br />
             
             <ul className="paradireita">
-            <h1>List</h1>
-            <DatePicker />
+            <h1>List</h1>    
             <br/>
             {data.map((i) => (
                 <li key={i.id}>{i.title} : {i.summary} : 
@@ -119,7 +118,8 @@ export default function Estado() {
                 <label>
                     Descrição:
                     <input type="text" placeholder="Descrição" name="regSum" />
-                </label>                
+                </label>
+                <DatePicker />                
                 <br />
                 <br />                
                 <button type="reset">Reset</button>

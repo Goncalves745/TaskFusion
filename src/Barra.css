@@ -22,11 +22,13 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  z-index: 999;
 }
 
 .nav-menu.active {   
   position:fixed;
   left: 0;
+  flex-direction:initial;
   transition: 350ms;
   z-index: 999;
  
@@ -81,19 +83,19 @@ text-align: center;
 margin: 0;
 top: 2.7%;
 position: absolute;
-left: 50%;
-transform: translateX(-50%);
+left: 46%;
+transform: translateX(-0%);
 font-size: 2rem;
 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 animation: fadeInUp 1s ease;
-transition: color 0.3s ease;
+transition: color 1s ease;
 }
 
 @keyframes fadeInUp {
 from {
   opacity: 0;
-  transform: translateX(-50%);
+  transform: translateX(-100%);
 }
 to {
   opacity: 1;

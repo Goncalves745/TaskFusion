@@ -1,6 +1,7 @@
 import React from 'react';
 import Barra from './Barra';
 import './MyApp.css';
+import GrupoEstado from './GrupoEstado';
 
 function grupos() {
   return (
@@ -10,6 +11,7 @@ function grupos() {
             <main className="page-content">
                 <article className="content-article">
                     <br />
+                    <GrupoEstado />
                     <br />
                 </article>  
             </main>

@@ -122,11 +122,12 @@ export default function Estado() {
                     Descrição:&nbsp;
                     <input type="text" placeholder="Descrição" name="regSum" />
                 </label>
-
+                
                 <br /><br />
                 <DatePicker />      
-                         
-
+                <br />
+                Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
+                <br />
                 <br />
                               
                 <button type="reset">Reset</button>

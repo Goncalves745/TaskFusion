@@ -75,7 +75,11 @@ export default function Estado() {
     return (
         <>
             
-            <br /> <br /> 
+
+
+          
+            <br /><br />
+
             
             <ul className="paradireita">
             <h1>List</h1>    
@@ -109,24 +113,27 @@ export default function Estado() {
             <h3>Adicionar Registo</h3>
             <form method="post" style={{marginTop: "20px"}} onSubmit={handleSubmit}>
                 <label>
-                    Titulo:
-                    <input type="text" placeholder="Task" name="regTitle" />
+                    Titulo:&nbsp;
+                    <input type="text" placeholder="Titulo" name="regTitle" />
                 </label>
                 <br />
                 <br />
                 <label>
-                    Descrição:
+                    Descrição:&nbsp;
                     <input type="text" placeholder="Descrição" name="regSum" />
                 </label>
+
                 <br /><br />
-                <DatePicker />                
+                <DatePicker />      
+                         
+
                 <br />
                               
                 <button type="reset">Reset</button>
                 <button type="submit">Add</button>
             </form>
             </div>
-            <br /><br /> 
+            <br /> 
 
             
         </>

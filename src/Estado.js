@@ -75,8 +75,7 @@ export default function Estado() {
     return (
         <>
             
-            <h1 style={{color: "white"}}>TASK</h1>
-            <br />
+            <br /> <br /> 
             
             <ul className="paradireita">
             <h1>List</h1>    
@@ -119,9 +118,10 @@ export default function Estado() {
                     Descrição:
                     <input type="text" placeholder="Descrição" name="regSum" />
                 </label>
+                <br /><br />
                 <DatePicker />                
                 <br />
-                <br />                
+                              
                 <button type="reset">Reset</button>
                 <button type="submit">Add</button>
             </form>

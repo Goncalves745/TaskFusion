@@ -6,7 +6,7 @@ import List from './List';
 import Data from './Data';
 import Estado from './Estado';
 import DatePicker from './DatePicker';
-
+import Reports from './reports';
 
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
@@ -18,9 +18,6 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function App2() {
   
-
-  
-
   const query = new URLSearchParams({ id: 1 });
   const [Task, setTask] = React.useState("Task")
 
@@ -28,12 +25,8 @@ function App2() {
     
 <>
     <div style={{height: "90%",}}>
-       <Barra />
-          <Routes>
-
-            <Route path='/' />
-            
-          </Routes>
+          <Barra />
+     
       
       
       <main className="page-content">

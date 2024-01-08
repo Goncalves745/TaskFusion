@@ -4,7 +4,6 @@ import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import { FaArrowsRotate } from "react-icons/fa6";
 
-
 export const BarraData = [
   {
     title: 'Home',
@@ -20,19 +19,19 @@ export const BarraData = [
   },
   {
     title: 'Tarefas',
-    path: '/products',
+    path: '/Tarefas',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
   },
   {
     title: 'Notificação',
-    path: '/team',
+    path: '/Notificacao',
     icon: <FaIcons.FaEnvelopeOpenText />,
     cName: 'nav-text'
   },
   {
     title: 'Sincronizar',
-    path: '/messages',
+    path: '/Sincronizar',
     icon: <FaArrowsRotate />,
     cName: 'nav-text'
   },

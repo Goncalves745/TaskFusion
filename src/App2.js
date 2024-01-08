@@ -6,7 +6,7 @@ import List from './List';
 import Data from './Data';
 import Estado from './Estado';
 import DatePicker from './DatePicker';
-import Reports from './reports';
+import Grupos from './Grupos';
 
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
@@ -40,10 +40,7 @@ function App2() {
        
       </main>
       
-        <footer className="page-footer">
-          <h1>Footer E</h1>
-          <h1>Footer D</h1>        
-        </footer>
+
     </div>
     
     

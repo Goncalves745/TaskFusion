@@ -7,7 +7,7 @@ import Data from './Data';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App2 from './App2';
 
-import Reports from './reports';
+import Grupos from './Grupos';
 
 
 import * as React from "react";
@@ -20,7 +20,7 @@ export default () => (
   <Router>
     <Routes>     
       <Route path="/" element={<App2 />} />
-      <Route path='/reports' element={<Reports />} />
+      <Route path='/Grupos' element={<Grupos />} />
       <Route path="/list" element={<List />} />
     </Routes>
   </Router>

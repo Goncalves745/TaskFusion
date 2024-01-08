@@ -13,7 +13,7 @@ export const BarraData = [
   },
   {
     title: 'Grupos',
-    path: '/reports',
+    path: '/Grupos',
     icon: <IoIcons.IoMdPeople />,
     cName: 'nav-text'
   },

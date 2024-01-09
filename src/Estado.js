@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DatePicker from './DatePicker';
+import dateFormat from 'dateformat';
 
 export default function Estado() {
     const [articles, setArticles] = useState([
@@ -11,24 +12,28 @@ export default function Estado() {
           title: "Task 1",
           summary: "Task 1 Summary",
           display: "none",
+          date : null,
         },
         {
           id: 2,
           title: "Task 2",
           summary: "Task 2 Summary",
           display: "none",
+          date : null,
         },
         {
           id: 3,
           title: "Task 3",
           summary: "Task 3 Summary",
           display: "none",
+          date : null,
         },
         {
           id: 4,
           title: "Task 4",
           summary: "Task 4 Summary",
           display: "none",
+          date : null,
         },
     ]);
 
@@ -37,7 +42,7 @@ export default function Estado() {
       }, [articles]); 
 
 
-    function handleSubmit(event){
+    function handleSubmit(event, date){
         event.preventDefault();
 
         const form = event.target;
@@ -49,6 +54,7 @@ export default function Estado() {
                 title: formData.get('regTitle'),
                 summary: formData.get('regSum'),
                 display: "none",
+                date: dateFormat(date, "dd, mmm, yyyy"),
             },
         ];
 
@@ -69,7 +75,9 @@ export default function Estado() {
     }
 
     function onClickRemove(id){
-        alert(id);
+        alert(id + " Deletado!");
+        const arr = articles.filter((a) => a.id !== id);
+        setArticles(arr);
     }
 
     function test(date) {
@@ -89,7 +97,7 @@ export default function Estado() {
             <h1>List</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}>{i.title} : {i.summary} : 
+                <li key={i.id}>{i.title} : {i.summary} {i.date}: 
                     <a
                         href={`#${i.id}`}
                         title="Remover"

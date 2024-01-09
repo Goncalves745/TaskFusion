@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect } from "react";
 import DatePicker from './DatePicker';
+import dateFormat from 'dateformat';
 
 export default function GrupoEstado(){
     const [articles, setArticles] = useState([
@@ -33,7 +34,7 @@ export default function GrupoEstado(){
         setData(articles);
       }, [articles]); 
 
-      function handleSubmit(event){
+      function handleSubmit(event, date){
         event.preventDefault();
 
         const form = event.target;
@@ -45,6 +46,7 @@ export default function GrupoEstado(){
                 title: formData.get('regTitle'),
                 summary: formData.get('regSum'),
                 display: "none",
+                date: dateFormat(date, "dd, mmm, yyyy"),
             },
         ];
 
@@ -65,7 +67,9 @@ export default function GrupoEstado(){
           setData(arr);
       }
       function onClickRemove(id){
-        alert(id);
+        alert(id + " Deletado!");
+        const arr = articles.filter((a) => a.id !== id);
+        setArticles(arr);
     }
 
     function test(date) {
@@ -85,7 +89,7 @@ export default function GrupoEstado(){
             <h1>List</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}>{i.title} : {i.summary} : 
+                <li key={i.id}>{i.title} : {i.summary} {i.date} : 
                     <a
                         href={`#${i.id}`}
                         title="Remover"

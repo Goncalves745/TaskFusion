@@ -7,8 +7,12 @@ export default function DateApp({func}){
     const [selectedDate, setSelectedDate] = useState(new Date());
     return(
     <div className="DateApp">
-        <DatePicker 
-        selected={selectedDate} onChange={date => {setSelectedDate(date) ; func(date)}} placeholderText="Mes/Dia/Ano"/>
+        <DatePicker
+        showIcon 
+        dateFormat="dd/MM/yyyy"
+        selected={selectedDate} 
+        onChange={date => {setSelectedDate(date) ; func(date)}} 
+        placeholderText="Dia/Mes/Ano"/>
     </div>
     )
 }

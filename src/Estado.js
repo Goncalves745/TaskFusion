@@ -72,6 +72,10 @@ export default function Estado() {
         alert(id);
     }
 
+    function test(date) {
+        alert(date);
+    }
+
     return (
         <>
             
@@ -123,8 +127,8 @@ export default function Estado() {
                     <input type="text" placeholder="Descrição" name="regSum" />
                 </label>
                 
-                <br /><br />
-                <DatePicker />      
+                <br /><br />  
+                <DatePicker func={test} />
                 <br />
                 Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
                 <br />

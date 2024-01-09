@@ -68,6 +68,10 @@ export default function GrupoEstado(){
         alert(id);
     }
 
+    function test(date) {
+        alert(date);
+    }
+
     return (
         <>
             
@@ -120,12 +124,13 @@ export default function GrupoEstado(){
                 </label>
                 
                 <br /><br />
-                <DatePicker />      
+                <DatePicker func={test} />     
                 <br />
                 Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
                 <br />
+                <button type="reset">Assign Task</button>
                 <br />
-                              
+                <br />         
                 <button type="reset">Reset</button>
                 <button type="submit">Add</button>
             </form>

@@ -1,4 +1,4 @@
-//import './MyApp.css';
+import './MyApp.css';
 import Header from './Header';
 import Nav from './Nav';
 import List from './List';

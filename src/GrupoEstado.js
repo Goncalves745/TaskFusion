@@ -1,48 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import DatePicker from './DatePicker';
 import dateFormat from 'dateformat';
 
-export default function Estado() {
+export default function GrupoEstado(){
     const [articles, setArticles] = useState([
         {
           id: 1,
           title: "Task 1",
           summary: "Task 1 Summary",
           display: "none",
-          date : null,
         },
         {
           id: 2,
           title: "Task 2",
           summary: "Task 2 Summary",
           display: "none",
-          date : null,
         },
         {
           id: 3,
           title: "Task 3",
           summary: "Task 3 Summary",
           display: "none",
-          date : null,
         },
         {
           id: 4,
           title: "Task 4",
           summary: "Task 4 Summary",
           display: "none",
-          date : null,
         },
     ]);
-
-      useEffect(() => {
+    useEffect(() => {
         setData(articles);
       }, [articles]); 
 
-
-    function handleSubmit(event, date){
+      function handleSubmit(event, date){
         event.preventDefault();
 
         const form = event.target;
@@ -64,17 +56,17 @@ export default function Estado() {
        
     }
 
-    const [data, setData] = useState(articles);
-    const [search, setSearch] = useState("");    
 
-    function pesquisa (event){
-        event.preventDefault();
-
-        const arr = articles.filter((a) => (search.length === 0 || a.summary.toLowerCase().includes(search.toLowerCase())))
-        setData(arr);
-    }
-
-    function onClickRemove(id){
+      const [data, setData] = useState(articles);
+      const [search, setSearch] = useState("");    
+  
+      function pesquisa (event){
+          event.preventDefault();
+  
+          const arr = articles.filter((a) => (search.length === 0 || a.summary.toLowerCase().includes(search.toLowerCase())))
+          setData(arr);
+      }
+      function onClickRemove(id){
         alert(id + " Deletado!");
         const arr = articles.filter((a) => a.id !== id);
         setArticles(arr);
@@ -97,7 +89,7 @@ export default function Estado() {
             <h1>List</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}>{i.title} : {i.summary} {i.date}: 
+                <li key={i.id}>{i.title} : {i.summary} {i.date} : 
                     <a
                         href={`#${i.id}`}
                         title="Remover"
@@ -132,16 +124,22 @@ export default function Estado() {
                 <br />
                 <label>
                     Descrição:&nbsp;
-                    <input type="text" placeholder="Descrição" name="regSum" />
+                    <textarea 
+                    type="text" 
+                    placeholder="Descrição"
+                    rows={30}
+                    cols={73} 
+                    name="regSum" />
                 </label>
                 
-                <br /><br />  
-                <DatePicker func={test} />
+                <br /><br />
+                <DatePicker func={test} />     
                 <br />
                 Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
                 <br />
+                <button type="reset">Assign Task</button>
                 <br />
-                              
+                <br />         
                 <button type="reset">Reset</button>
                 <button type="submit">Add</button>
             </form>
@@ -151,4 +149,5 @@ export default function Estado() {
             
         </>
     );
+
 }

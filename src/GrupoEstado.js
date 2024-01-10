@@ -105,7 +105,7 @@ export default function GrupoEstado(){
             <h3>Pesquisar Task</h3>       
             <label>
                
-                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar Task" name="pesq" />
+                <input style={{width:"90%"}} type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar Task" name="pesq" />
             </label>
             <br />
             <br />
@@ -119,14 +119,16 @@ export default function GrupoEstado(){
                 <label>
                     Titulo:&nbsp;
                     <input type="text" placeholder="Titulo" name="regTitle" />
+                    <br /> <br />  Descrição
                 </label>
+                
                 <br />
-                <br />
+                
                 <label>
-                    Descrição:&nbsp;
+                    
                     <textarea 
                     type="text" 
-                    placeholder="Descrição"
+                    placeholder=" Descrição"
                     rows={30}
                     cols={73} 
                     name="regSum" />
@@ -136,7 +138,7 @@ export default function GrupoEstado(){
                 <DatePicker func={test} />     
                 <br />
                 Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
-                <br />
+                <br /><br />
                 <button type="reset">Assign Task</button>
                 <br />
                 <br />         

@@ -131,8 +131,13 @@ export default function Estado() {
                 <br />
                 <br />
                 <label>
-                    Descrição:&nbsp;
-                    <input type="text" placeholder="Descrição" name="regSum" />
+                    
+                    <textarea 
+                    type="text" 
+                    placeholder=" Descrição"
+                    rows={30}
+                    cols={73} 
+                    name="regSum" />
                 </label>
                 
                 <br /><br />  

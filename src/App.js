@@ -16,6 +16,7 @@ import ArticleList from "./ArticleList";
 import AddArticle from "./AddArticle";
 import MyFeature from "./MyFeature";
 import GruposTask from './GruposTask';
+import Sincronizar from './Sincronizar';
 
 export default () => (
   <Router>
@@ -23,6 +24,7 @@ export default () => (
       <Route path="/" element={<App2 />} />
       <Route path='/Grupos' element={<Grupos />} />
       <Route path="/GruposTask" element={<GruposTask />} />
+      <Route path="/Sincronizar" element={<Sincronizar />} />
     </Routes>
   </Router>
 );

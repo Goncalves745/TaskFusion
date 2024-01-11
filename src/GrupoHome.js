@@ -9,25 +9,25 @@ export default function GrupoHome(){
         {
           id: 1,
           title: "Grupo 1",
-          summary: "O melhor grupo",
+          summary: "Grupo Fixe",
           display: "none",
         },
         {
           id: 2,
           title: "Grupo 2",
-          summary: "Temple OS",
+          summary: "Grupo Fixe",
           display: "none",
         },
         {
           id: 3,
           title: "Grupo 3",
-          summary: "Jonny Walls Group",
+          summary: "Grupo Fixe",
           display: "none",
         },
         {
           id: 4,
           title: "Grupo 4",
-          summary: "Xbox Fans",
+          summary: "Grupo Fixe",
           display: "none",
         },
     ]);
@@ -85,7 +85,7 @@ export default function GrupoHome(){
             <h1>Grupos</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}> <Link to={"/GruposTask"}>{i.title}</Link> : &nbsp;
+                <li key={i.id}> <Link to={"/GruposTask"}>{i.title}</Link> : &nbsp;     
                 {i.summary}                 
                  &nbsp; 
                     <a className='vermelho'

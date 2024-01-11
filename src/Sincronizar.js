@@ -10,17 +10,9 @@ import {Route} from 'react-router-dom';
 function Sincronizar() {
   return (
     <>
-        <div style={{height: "90%",}}>
-            <Barra />
-            <main className="page-content">
-                <article className="content-article">
-                    <br />
-                    {alert('Sincronizar')}  
-                    {window.location.replace("/")}                                  
-                    <br />
-                </article>  
-            </main>
-        </div>
+    {alert('Sincronizado')}   
+    {window.location.replace("/")}  
+     
     </>
   );
 }

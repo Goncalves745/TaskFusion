@@ -136,9 +136,18 @@ export default function GrupoEstado(){
                 <br />
                 Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
                 <br /><br />
-                <button type="reset">Assign Task</button>
-                <br />
-                <br />         
+
+                Pessoas: 
+                <input type="text" list="pessoas" />
+                <datalist id="pessoas">
+                    <option>João</option>
+                    <option>Filipe</option>
+                    <option>Rui</option>
+                    <option>Mohamed</option>
+                </datalist>
+
+                <br /><br /><br /> 
+                        
                 <button type="reset">Reset</button>
                 <button type="submit">Add</button>
             </form>

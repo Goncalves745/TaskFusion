@@ -2,14 +2,17 @@ import React from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
+import { CgProfile } from "react-icons/cg";
+import { MdPerson } from "react-icons/md";
 import { FaArrowsRotate } from "react-icons/fa6";
 import { FaGear } from "react-icons/fa6";
 
 export const BarraData = [
+  
   {
-    title:'Home',
+    title:'Tarefas',
     path: '/',
-    icon: <AiIcons.AiFillHome />,
+    icon: <IoIcons.IoIosPaper />,
     cName:'nav-text'
   },
   {
@@ -19,17 +22,18 @@ export const BarraData = [
     cName: 'nav-text'
   },
   {
+    title: 'Conta',
+    path: '/Conta',
+    icon: <MdPerson />,
+    cName: 'nav-text'
+  },
+  /*
+  {
     title: 'Tarefas',
     path: '/Tarefas',
     icon: <IoIcons.IoIosPaper />,
     cName: 'nav-text'
-  },
-  {
-    title: 'Notificação',
-    path: '/Notificacao',
-    icon: <FaIcons.FaEnvelopeOpenText />,
-    cName: 'nav-text'
-  },
+  },*/
   {
     title: 'Sincronizar',
     path: '/Sincronizar',

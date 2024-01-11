@@ -25,9 +25,11 @@ function Barra() {
               <Link to='#' className='menu-bars'>
                 <AiIcons.AiOutlineClose />
               </Link>
+              
             </li>
+            <div className='MenuItems'>
             {BarraData.map((item, index) => {
-              return (
+              return ( 
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
                     {item.icon}
@@ -36,7 +38,8 @@ function Barra() {
                 </li>
                 );
               })
-              }        
+              }
+            </div>        
       </ul>
     </nav>
     </>  

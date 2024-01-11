@@ -17,6 +17,8 @@ import AddArticle from "./AddArticle";
 import MyFeature from "./MyFeature";
 import GruposTask from './GruposTask';
 import Sincronizar from './Sincronizar';
+import Conta from './conta';
+import PagRegistar from './PagRegistar';
 
 export default () => (
   <Router>
@@ -25,6 +27,8 @@ export default () => (
       <Route path='/Grupos' element={<Grupos />} />
       <Route path="/GruposTask" element={<GruposTask />} />
       <Route path="/Sincronizar" element={<Sincronizar />} />
+      <Route path="/Conta" element={<Conta />} />
+      <Route path="/PagRegistar" element={<PagRegistar />} />
     </Routes>
   </Router>
 );

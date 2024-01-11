@@ -196,6 +196,13 @@ header {
   align-content: space-between;
 }
 
+
+.blue{  
+  text-decoration: underline;
+  color:cyan;
+}
+
+/*
 nav {
   background-color: white;
   border-style: solid;  
@@ -205,7 +212,7 @@ nav {
   flex-direction: column;
   justify-content: left;
   text-align: left;
-}
+}*/
 
 
 footer {

@@ -13,6 +13,7 @@ export default function Estado() {
           summary: "Task 1 Summary",
           display: "none",
           date : null,
+          repeatable : null,
         },
         {
           id: 2,
@@ -20,6 +21,7 @@ export default function Estado() {
           summary: "Task 2 Summary",
           display: "none",
           date : null,
+          repeatable : null,
         },
         {
           id: 3,
@@ -27,6 +29,7 @@ export default function Estado() {
           summary: "Task 3 Summary",
           display: "none",
           date : null,
+          repeatable : null,
         },
         {
           id: 4,
@@ -34,6 +37,7 @@ export default function Estado() {
           summary: "Task 4 Summary",
           display: "none",
           date : null,
+          repeatable : null,
         },
     ]);
 
@@ -54,7 +58,8 @@ export default function Estado() {
                 title: formData.get('regTitle'),
                 summary: formData.get('regSum'),
                 display: "none",
-                date: dateFormat(date, "dd, mmm, yyyy"),
+                date: dateFormat(date, "dd/mm/yyyy"),
+                repeatable: formData.get('repeat')
             },
         ];
 
@@ -88,13 +93,11 @@ export default function Estado() {
         <> 
         <h1 style={{color:'white',fontSize:'20px'}}>Tasks</h1>
             <br /><br />
-
-            
             <ul className="paradireita">
             <h1>List</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}>{i.title} : {i.summary} {i.date} 
+                <li key={i.id}>{i.title} : {i.summary}  {i.date}  {i.repeatable} 
                     <a
                         className='vermelho'
                         href={`#${i.id}`}
@@ -111,7 +114,7 @@ export default function Estado() {
             <h3>Pesquisar Task</h3>       
             <label>
                
-                <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar Task" name="pesq" />
+            <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar Task" name="pesq" />
             </label>
             <br />
             <br />
@@ -141,7 +144,7 @@ export default function Estado() {
                 <br /><br />  
                 <DatePicker func={test} />
                 <br />
-                Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
+                Repeatable: <input type="checkbox" name="repeat" defaultChecked={false} />        
                 <br />
                 <br />
                               

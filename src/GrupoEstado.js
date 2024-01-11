@@ -78,19 +78,16 @@ export default function GrupoEstado(){
 
     return (
         <>
-            
+            <h1 style={{color:'white',fontSize:'20px'}}>Grupo Tasks</h1>   
 
-
-          
             <br /><br />
-
-            
+          
             <ul className="paradireita">
             <h1>List</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}>{i.title} : {i.summary} {i.date} : 
-                    <a
+                <li key={i.id}>{i.title} : {i.summary} {i.date}  
+                    <a className='vermelho'
                         href={`#${i.id}`}
                         title="Remover"
                         onClick={onClickRemove.bind(null, i.id)}

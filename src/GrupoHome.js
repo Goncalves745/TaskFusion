@@ -21,7 +21,7 @@ export default function GrupoHome(){
         {
           id: 3,
           title: "Grupo 3",
-          summary: "Jonny Wallds Group",
+          summary: "Jonny Walls Group",
           display: "none",
         },
         {
@@ -79,16 +79,16 @@ export default function GrupoHome(){
 
     return (
         <>       
+            <h1 style={{color:'white',fontSize:'20px'}}>Grupo</h1>
             <br /><br />   
             <ul className="paradireita">
             <h1>Grupos</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}>{i.title} : 
-                {i.summary}
-                <Link to={"/GrupoEstado"}></Link> 
-                : 
-                    <a
+                <li key={i.id}> <Link to={"/GruposTask"}>{i.title}</Link> : &nbsp;
+                {i.summary}                 
+                 &nbsp; 
+                    <a className='vermelho'
                         href={`#${i.id}`}
                         title="Remover"
                         onClick={onClickRemove.bind(null, i.id)}

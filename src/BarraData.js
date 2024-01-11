@@ -3,13 +3,14 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
 import { FaArrowsRotate } from "react-icons/fa6";
+import { FaGear } from "react-icons/fa6";
 
 export const BarraData = [
   {
-    title: 'Home',
+    title:'Home',
     path: '/',
     icon: <AiIcons.AiFillHome />,
-    cName: 'nav-text'
+    cName:'nav-text'
   },
   {
     title: 'Grupos',
@@ -38,7 +39,7 @@ export const BarraData = [
   {
     title: 'Defenições',
     path: '/support',
-    icon: <IoIcons.IoMdHelpCircle />,
+    icon: <FaGear />,
     cName: 'nav-text'
   }
 ];

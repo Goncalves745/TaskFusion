@@ -85,11 +85,8 @@ export default function Estado() {
     }
 
     return (
-        <>
-            
-
-
-          
+        <> 
+        <h1 style={{color:'white',fontSize:'20px'}}>Tasks</h1>
             <br /><br />
 
             
@@ -97,8 +94,9 @@ export default function Estado() {
             <h1>List</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}>{i.title} : {i.summary} {i.date}: 
+                <li key={i.id}>{i.title} : {i.summary} {i.date} 
                     <a
+                        className='vermelho'
                         href={`#${i.id}`}
                         title="Remover"
                         onClick={onClickRemove.bind(null, i.id)}

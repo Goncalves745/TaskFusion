@@ -1,7 +1,8 @@
 import React from 'react';
 import Barra from './Barra';
 import './MyApp.css';
-import GrupoHome from './GrupoHome';
+import GrupoEstado from './GrupoEstado';
+
 
 function grupos() {
   return (
@@ -11,7 +12,7 @@ function grupos() {
             <main className="page-content">
                 <article className="content-article">
                     <br />
-                    <GrupoHome />
+                    <GrupoEstado />
                     <br />
                 </article>  
             </main>

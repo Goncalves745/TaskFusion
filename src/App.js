@@ -15,14 +15,14 @@ import * as ReactDOM from "react-dom/client";
 import ArticleList from "./ArticleList";
 import AddArticle from "./AddArticle";
 import MyFeature from "./MyFeature";
-import GrupoEstado from './GrupoEstado';
+import GruposTask from './GruposTask';
 
 export default () => (
   <Router>
     <Routes>     
       <Route path="/" element={<App2 />} />
       <Route path='/Grupos' element={<Grupos />} />
-      <Route path="/GrupoEstado" element={<GrupoEstado />} />
+      <Route path="/GruposTask" element={<GruposTask />} />
     </Routes>
   </Router>
 );

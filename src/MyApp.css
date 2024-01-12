@@ -99,6 +99,30 @@ aside h1 {
   align-self: flex-start;
 }
 
+.adicionar{
+  margin-top: 10%;
+  color: white;
+  position:fixed;
+  padding: 20px;
+  border-radius: 40px;
+  background-color: #4f6782;
+  border: solid 3px #37485b;  
+  left: 30px;
+}
+
+@media only screen and (max-width: 1549px) {
+  .adicionar{
+    margin-top: 15%;
+    color: white;
+    position:fixed;
+    padding: 20px;
+    border-radius: 40px;
+    background-color: #4f6782;
+    border: solid 3px #37485b;  
+    left: 30px;
+  }
+
+}
 
 @media only screen and (max-width: 1000px) {
 
@@ -139,6 +163,23 @@ aside h1 {
     text-align: center;
     left: 0px;
     align-items: center;
+  }
+
+
+  .adicionar{
+    color: white;
+    margin-right: 29%;
+    margin-left: 29%;
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #4f6782;
+    border: solid 3px #37485b;
+    padding-bottom: 30px; 
+    position:static;
+    text-align: center;
+    left: 0px;
+    align-items: center;
+    margin-top: 0%;
   }
 }
 

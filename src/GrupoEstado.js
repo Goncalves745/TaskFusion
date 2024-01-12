@@ -30,9 +30,12 @@ export default function GrupoEstado(){
           display: "none",
         },
     ]);
+
     useEffect(() => {
         setData(articles);
       }, [articles]); 
+      function adicionarP(event, date){
+    }
 
       function handleSubmit(event, date){
         event.preventDefault();
@@ -49,11 +52,8 @@ export default function GrupoEstado(){
                 date: dateFormat(date, "dd, mmm, yyyy"),
             },
         ];
-
         console.log(nArr);
         setArticles(nArr);
-
-       
     }
 
 
@@ -66,6 +66,7 @@ export default function GrupoEstado(){
           const arr = articles.filter((a) => (search.length === 0 || a.summary.toLowerCase().includes(search.toLowerCase())))
           setData(arr);
       }
+      
       function onClickRemove(id){
         alert(id + " Deletado!");
         const arr = articles.filter((a) => a.id !== id);
@@ -79,9 +80,7 @@ export default function GrupoEstado(){
     return (
         <>
             <h1 style={{color:'white',fontSize:'20px'}}>Grupo Tasks</h1>   
-
-            <br /><br />
-          
+            <br /><br />       
             <ul className="paradireita">
             <h1>List</h1>    
             <br/>
@@ -100,13 +99,23 @@ export default function GrupoEstado(){
             
             <div className='pesquisa'>
             <h3>Pesquisar Task</h3>       
-            <label>
-               
-                <input style={{width:"90%"}} type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar Task" name="pesq" />
+            <label>               
+            <input style={{width:"90%"}} type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Pesquisar Task" name="pesq" />
             </label>
             <br />
             <br />
             <button type="button" onClick={pesquisa}>Pesquisar</button>
+            </div>
+
+            <div className='adicionar' >
+            <h3>Adicionar Pessoa</h3>      
+            <form method="post" style={{marginTop: "20px"}} onSubmit={adicionarP}></form> 
+            <label>             
+            <input style={{width:"90%"}} type="text" placeholder="Adicionar Pessoa" name="AddP" />
+            </label>
+            <br /><br />
+            <button type="submit" >Adicionar</button>
+            <form/>
             </div>
 
             <div className='paraesquerda'>
@@ -116,27 +125,23 @@ export default function GrupoEstado(){
                 <label>
                     Titulo:&nbsp;
                     <input type="text" placeholder="Titulo" name="regTitle" />
-                    <br /> <br />  Descrição
-                </label>
-                
-                <br />
-                
+                    <br /> <br />  
+                    Descrição
+                </label>                
+                <br />                
                 <label>
-                    
                     <textarea 
                     type="text" 
                     placeholder=" Descrição"
                     rows={30}
                     cols={73} 
                     name="regSum" />
-                </label>
-                
+                </label>                
                 <br /><br />
                 <DatePicker func={test} />     
                 <br />
                 Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
                 <br /><br />
-
                 Pessoas: 
                 <input type="text" list="pessoas" />
                 <datalist id="pessoas">

@@ -10,24 +10,28 @@ export default function GrupoEstado(){
           title: "Task 1",
           summary: "Task 1 Summary",
           display: "none",
+          repeatable : null,
         },
         {
           id: 2,
           title: "Task 2",
           summary: "Task 2 Summary",
           display: "none",
+          repeatable : null,
         },
         {
           id: 3,
           title: "Task 3",
           summary: "Task 3 Summary",
           display: "none",
+          repeatable : null,
         },
         {
           id: 4,
           title: "Task 4",
           summary: "Task 4 Summary",
           display: "none",
+          repeatable : null,
         },
     ]);
 
@@ -49,7 +53,8 @@ export default function GrupoEstado(){
                 title: formData.get('regTitle'),
                 summary: formData.get('regSum'),
                 display: "none",
-                date: dateFormat(date, "dd, mmm, yyyy"),
+                date: dateFormat(date, "dd/mm/yyyy"),
+                repeatable: formData.get('repeat')
             },
         ];
         console.log(nArr);
@@ -85,7 +90,7 @@ export default function GrupoEstado(){
             <h1>List</h1>    
             <br/>
             {data.map((i) => (
-                <li key={i.id}>{i.title} : {i.summary} {i.date}  
+                <li key={i.id}>{i.title} : {i.summary} {i.date} {i.repeatable}  
                     <a className='vermelho'
                         href={`#${i.id}`}
                         title="Remover"
@@ -140,7 +145,7 @@ export default function GrupoEstado(){
                 <br /><br />
                 <DatePicker func={test} />     
                 <br />
-                Repeatable: <input type="checkbox" name="myCheckbox" defaultChecked={true} />        
+                Repeatable: <input type="checkbox" name="repeat" defaultChecked={false} />        
                 <br /><br />
                 Pessoas: 
                 <input type="text" list="pessoas" />

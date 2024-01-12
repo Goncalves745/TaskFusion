@@ -39,11 +39,11 @@ export const BarraData = [
     path: '/Sincronizar',
     icon: <FaArrowsRotate />,
     cName: 'nav-text'
-  },
+  }/*,
   {
     title: 'Defenições',
     path: '/support',
     icon: <FaGear />,
     cName: 'nav-text'
-  }
+  }*/
 ];

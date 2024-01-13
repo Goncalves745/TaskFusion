@@ -8,29 +8,17 @@ export default function GrupoEstado(){
         {
           id: 1,
           title: "Task 1",
-          summary: "Task 1 Summary",
+          summary: "Realizar os testes com utilizadores",
           display: "none",
+          date : "08/07/2024",
           repeatable : null,
         },
         {
           id: 2,
           title: "Task 2",
-          summary: "Task 2 Summary",
+          summary: "Apresentar a interface (demo) que foi desenvolvida",
           display: "none",
-          repeatable : null,
-        },
-        {
-          id: 3,
-          title: "Task 3",
-          summary: "Task 3 Summary",
-          display: "none",
-          repeatable : null,
-        },
-        {
-          id: 4,
-          title: "Task 4",
-          summary: "Task 4 Summary",
-          display: "none",
+          date : "16/01/2024",
           repeatable : null,
         },
     ]);
@@ -84,7 +72,7 @@ export default function GrupoEstado(){
 
     return (
         <>
-            <h1 style={{color:'white',fontSize:'20px'}}>Grupo Tasks</h1>   
+            <h1 style={{color:'white',fontSize:'20px'}}>Grupo 1 Tasks</h1>   
             <br /><br />       
             <ul className="paradireita">
             <h1>List</h1>    
